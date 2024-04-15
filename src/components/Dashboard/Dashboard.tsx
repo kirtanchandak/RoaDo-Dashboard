@@ -7,6 +7,10 @@ import driver from "../../assets/quick-actions/driver.png";
 import addIdents from "../../assets/quick-actions/addIndents.png";
 import Highlights from "./components/Highlights";
 import Alerts from "./components/Alerts";
+import search from "../../assets/search.png";
+import notification from "../../assets/notification.png";
+import dots from "../../assets/3dots.png";
+import { Divider } from "@mui/material";
 
 function Dashboard() {
   const quickActions = [
@@ -41,6 +45,21 @@ function Dashboard() {
       img: addIdents,
     },
   ];
+
+  const topBar = [
+    {
+      id: 1,
+      img: search,
+    },
+    {
+      id: 2,
+      img: notification,
+    },
+    {
+      id: 3,
+      img: dots,
+    },
+  ];
   return (
     <>
       <Box sx={{ display: "flex", paddingLeft: 8 }}>
@@ -52,9 +71,43 @@ function Dashboard() {
           }}
         >
           <Box>
-            <h1 style={{ fontWeight: 500, margin: 0, marginBottom: 4 }}>
-              Dashboard
-            </h1>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <h1 style={{ fontWeight: 500, margin: 0, marginBottom: 4 }}>
+                Dashboard
+              </h1>
+              <Box
+                sx={{
+                  display: "flex",
+                  backgroundColor: "white",
+                  padding: 1,
+                  borderRadius: "100px",
+                  gap: 2,
+                }}
+              >
+                {topBar.map((icon, index) => (
+                  <Box key={icon.id} sx={{}}>
+                    <Box
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        marginTop: 8,
+                      }}
+                    >
+                      <img
+                        src={icon.img}
+                        style={{ width: 22, marginLeft: 3 }}
+                      />
+                    </Box>
+                  </Box>
+                ))}
+              </Box>
+            </Box>
           </Box>
           <Box sx={{ display: "flex", gap: 2 }}>
             <ChartBox />

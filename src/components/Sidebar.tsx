@@ -19,7 +19,7 @@ import bag from "../assets/sidebar-icons/bag.png";
 import wallet from "../assets/sidebar-icons/wallet.png";
 import windows from "../assets/sidebar-icons/windows.png";
 import settings from "../assets/sidebar-icons/settings.png";
-import Dashboard from "./Dashboard";
+import Dashboard from "./Dashboard/Dashboard";
 
 const sidebarIcons = [
   { id: 1, name: "menu", img: menu },
@@ -58,15 +58,6 @@ const closedMixin = (theme: Theme): CSSObject => ({
     width: `calc(${theme.spacing(8)} + 1px)`,
   },
 });
-
-const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-end",
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-}));
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
@@ -111,7 +102,7 @@ export default function MiniDrawer() {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{}}>
       <CssBaseline />
       <AppBar position="fixed" open={open}></AppBar>
       <Drawer variant="permanent" open={open} sx={{ border: "none" }}>
@@ -135,11 +126,10 @@ export default function MiniDrawer() {
           ))}
         </List>
       </Drawer>
-      <Box
-        component="main"
-        sx={{ flexGrow: 1, p: 3, backgroundColor: "#F7FAFF", height: "100vh" }}
-      >
-        <Dashboard />
+      <Box sx={{}}>
+        <Box>
+          <Dashboard />
+        </Box>
       </Box>
     </Box>
   );

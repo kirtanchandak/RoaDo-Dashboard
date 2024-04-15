@@ -5,7 +5,7 @@ import truck from "../../assets/quick-actions/truck.png";
 import trailer from "../../assets/quick-actions/trailer.png";
 import driver from "../../assets/quick-actions/driver.png";
 import addIdents from "../../assets/quick-actions/addIndents.png";
-import { Alert } from "@mui/material";
+import Highlights from "./components/Highlights";
 import Alerts from "./components/Alerts";
 
 function Dashboard() {
@@ -111,7 +111,9 @@ function Dashboard() {
           </Box>
           <Alerts />
         </Box>
-        <Box sx={{ width: "30%" }}>asd</Box>
+        <Box sx={{ width: "30%" }}>
+          <Highlights />
+        </Box>
       </Box>
     </>
   );

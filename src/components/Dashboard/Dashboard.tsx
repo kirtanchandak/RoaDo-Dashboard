@@ -10,7 +10,6 @@ import Alerts from "./components/Alerts";
 import search from "../../assets/search.png";
 import notification from "../../assets/notification.png";
 import dots from "../../assets/3dots.png";
-import { Divider } from "@mui/material";
 
 function Dashboard() {
   const quickActions = [
@@ -89,7 +88,7 @@ function Dashboard() {
                   gap: 2,
                 }}
               >
-                {topBar.map((icon, index) => (
+                {topBar.map((icon) => (
                   <Box key={icon.id} sx={{}}>
                     <Box
                       style={{

@@ -78,8 +78,8 @@ function Highlights() {
           >
             <p style={{ margin: 0, color: "#676666" }}>Income</p>
             <Box sx={{ marginTop: 1 }}>
-              <h3 style={{ margin: 0, color: "#148714" }}>100000 CAD</h3>
-              <p style={{ margin: 0, color: "#676666" }}>2 payments received</p>
+              <h3 style={{ margin: 0, color: "red" }}>50000 CAD</h3>
+              <p style={{ margin: 0, color: "#676666" }}>5 payments received</p>
             </Box>
           </Box>
         </Box>

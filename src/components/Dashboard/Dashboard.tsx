@@ -109,10 +109,10 @@ function Dashboard() {
             </Box>
           </Box>
           <Box sx={{ display: "flex", gap: 2 }}>
-            <ChartBox />
-            <ChartBox />
-            <ChartBox />
-            <ChartBox />
+            <ChartBox title="Orders" />
+            <ChartBox title="Trips" />
+            <ChartBox title="Revenue" />
+            <ChartBox title="Expences" />
           </Box>
           <Box sx={{ marginTop: 2 }}>
             <h2>Quick Actions</h2>

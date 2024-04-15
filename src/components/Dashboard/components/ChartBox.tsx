@@ -1,7 +1,12 @@
+import React from "react";
 import Box from "@mui/material/Box";
 import PieChart from "./PieChart";
 
-function ChartBox() {
+interface ChartBoxProps {
+  title: string;
+}
+
+const ChartBox: React.FC<ChartBoxProps> = ({ title }) => {
   return (
     <Box
       sx={{
@@ -14,7 +19,7 @@ function ChartBox() {
       }}
     >
       <Box sx={{}}>
-        <h3 style={{ paddingLeft: 20, fontSize: "14px" }}>Orders</h3>
+        <h3 style={{ paddingLeft: 20, fontSize: "14px" }}>{title}</h3>
         <Box
           sx={{
             display: "flex",
@@ -84,6 +89,6 @@ function ChartBox() {
       </Box>
     </Box>
   );
-}
+};
 
 export default ChartBox;

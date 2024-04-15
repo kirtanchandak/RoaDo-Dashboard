@@ -1,4 +1,3 @@
-import * as React from "react";
 import { styled, Theme, CSSObject } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
@@ -99,13 +98,11 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export default function MiniDrawer() {
-  const [open, setOpen] = React.useState(false);
-
   return (
     <Box sx={{}}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}></AppBar>
-      <Drawer variant="permanent" open={open} sx={{ border: "none" }}>
+      <AppBar position="fixed"></AppBar>
+      <Drawer variant="permanent" sx={{ border: "none" }}>
         <Box sx={{ display: "flex", justifyContent: "center", marginTop: 3 }}>
           <img src={logo} alt="" width={30} />
         </Box>
@@ -116,7 +113,7 @@ export default function MiniDrawer() {
               <ListItemButton
                 sx={{
                   minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
+                  justifyContent: "initial",
                   px: 2.5,
                 }}
               >

@@ -54,7 +54,7 @@ const plugins = [
       // Draw each line of text
       lines.forEach(function (line, index) {
         var textX = Math.round((width - ctx.measureText(line).width) / 2),
-          textY = startY + index * parseInt(fontSize) + index * 20; // Adding some extra spacing between lines
+          textY = startY + index * parseInt(fontSize) + index * 16; // Adding some extra spacing between lines
         ctx.fillText(line, textX, textY);
       });
       ctx.save();
@@ -69,7 +69,7 @@ export default function PieClickNoSnap() {
       spacing={{ xs: 0, md: 4 }}
       sx={{ width: "100%" }}
     >
-      <Box sx={{ width: 160, height: 160 }}>
+      <Box sx={{ width: "110px", height: "110px" }}>
         <Doughnut
           plugins={plugins}
           data={data}

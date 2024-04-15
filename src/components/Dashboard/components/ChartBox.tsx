@@ -5,16 +5,16 @@ function ChartBox() {
   return (
     <Box
       sx={{
-        width: "245px",
+        width: "196px",
+        height: "275px",
         backgroundColor: "white",
         display: "flex",
         flexDirection: "column",
         borderRadius: "12px",
-        paddingBottom: 2,
       }}
     >
       <Box sx={{}}>
-        <h3 style={{ paddingLeft: 20 }}>Orders</h3>
+        <h3 style={{ paddingLeft: 20, fontSize: "14px" }}>Orders</h3>
         <Box
           sx={{
             display: "flex",
@@ -24,14 +24,14 @@ function ChartBox() {
         >
           <Box
             sx={{
-              marginBottom: "10px", // Adjust spacing as needed
+              marginBottom: "10px",
             }}
           >
-            <PieChart /> {/* Center only PieChart */}
+            <PieChart />
           </Box>
         </Box>
 
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
           <Box
             sx={{
               background: "linear-gradient(to right, #FFFFFF, #FFCB49)",
@@ -42,11 +42,11 @@ function ChartBox() {
               paddingRight: 2,
               marginLeft: 2,
               marginRight: 2,
-              maxHeight: 45,
+              maxHeight: "24px",
             }}
           >
-            <p style={{ margin: 5 }}>Upcoming</p>
-            <p style={{ margin: 5 }}>50</p>
+            <p style={{ margin: 0 }}>Upcoming</p>
+            <p style={{ margin: 0 }}>50</p>
           </Box>
           <Box
             sx={{
@@ -58,11 +58,11 @@ function ChartBox() {
               paddingRight: 2,
               marginLeft: 2,
               marginRight: 2,
-              maxHeight: 45,
+              maxHeight: "24px",
             }}
           >
-            <p style={{ margin: 5 }}>Ongoing</p>
-            <p style={{ margin: 5 }}>100</p>
+            <p style={{ margin: 0 }}>Ongoing</p>
+            <p style={{ margin: 0 }}>100</p>
           </Box>
           <Box
             sx={{
@@ -74,11 +74,11 @@ function ChartBox() {
               paddingRight: 2,
               marginLeft: 2,
               marginRight: 2,
-              maxHeight: 45,
+              maxHeight: "24px",
             }}
           >
-            <p style={{ margin: 5 }}>Completed</p>
-            <p style={{ margin: 5 }}>50</p>
+            <p style={{ margin: 0 }}>Upcoming</p>
+            <p style={{ margin: 0 }}>50</p>
           </Box>
         </Box>
       </Box>
